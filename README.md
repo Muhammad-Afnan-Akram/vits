@@ -1,3 +1,10 @@
+# Muhammad Afnan Akram        19i-0588
+# Haroon Ayaz                 19-0571
+
+As we mentioned in our Proposed Approach, We are using Your TTS model for our Fake Speech generation module. Your TTS model consist of VITS model with small modification. So, we have to first train the VITS model.
+Initial steps:
+1) Data Preprocessing
+We have 
 # VITS: Conditional Variational Autoencoder with Adversarial Learning for End-to-End Text-to-Speech
 
 ### Jaehyeon Kim, Jungil Kong, and Juhee Son
