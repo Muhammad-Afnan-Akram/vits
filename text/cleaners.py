@@ -49,8 +49,8 @@ def expand_abbreviations(text):
   return text
 
 
-def expand_numbers(text):
-  return normalize_numbers(text)
+# def expand_numbers(text):
+#   return normalize_numbers(text)
 
 
 def lowercase(text):
@@ -71,6 +71,9 @@ def basic_cleaners(text):
   text = collapse_whitespace(text)
   return text
 
+def basic_cleaners_urdu(text):
+  text = collapse_whitespace(text)
+  return text
 
 def transliteration_cleaners(text):
   '''Pipeline for non-English text that transliterates to ASCII.'''
@@ -96,5 +99,12 @@ def english_cleaners2(text):
   text = lowercase(text)
   text = expand_abbreviations(text)
   phonemes = phonemize(text, language='en-us', backend='espeak', strip=True, preserve_punctuation=True, with_stress=True)
+  phonemes = collapse_whitespace(phonemes)
+  return phonemes
+
+
+def urdu_cleaners(text):
+
+  phonemes = phonemize(text, language='ur', backend='espeak', strip=True, language_switch='remove-flags')
   phonemes = collapse_whitespace(phonemes)
   return phonemes
