@@ -3,8 +3,11 @@
 
 As we mentioned in our Proposed Approach, We are using Your TTS model for our Fake Speech generation module. Your TTS model consist of VITS model with small modification. So, we have to first train the VITS model.
 Initial steps:
-1) Data Preprocessing
-We have 
+1) Data Preprocessing: 
+We have add Urdu cleaner in the cleaner.py, symbols for urdu in symbols.py and add path files in file lists.
+Then we start training according to below instruction. We use Nvidia RTX 3080 for this.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # VITS: Conditional Variational Autoencoder with Adversarial Learning for End-to-End Text-to-Speech
 
 ### Jaehyeon Kim, Jungil Kong, and Juhee Son
